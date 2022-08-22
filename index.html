@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- link to font awesome kit -->
+    <script
+      src="https://kit.fontawesome.com/8a4da680c8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- link to font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- link to stylesheet -->
+    <link rel="stylesheet" href="/dist/style.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="text-container">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+
+        <form action="/" method="GET" id="form" class="form">
+          <div class="limited">
+            <p>Try it free 7 days <span> then $20/mo. thereafter </span></p>
+          </div>
+
+          <div class="form-container">
+            <div class="form-gap position-rel">
+              <i class="fa-solid fa-exclamation"></i>
+              <input
+                class="form-input"
+                type="text"
+                name="fname"
+                id="fname"
+                placeholder="First Name"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="form-gap position-rel">
+              <i class="fa-solid fa-exclamation"></i>
+              <input
+                class="form-input"
+                type="text"
+                name="lname"
+                id="lname"
+                placeholder="Last Name"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="form-gap position-rel">
+              <i class="fa-solid fa-exclamation"></i>
+              <input
+                class="form-input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="form-gap position-rel">
+              <i class="fa-solid fa-exclamation"></i>
+              <input
+                class="form-input"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+              <p class="error-message"></p>
+            </div>
+
+            <div class="button">
+              <button type="submit" class="submit">
+                CLAIM YOUR FREE TRIAL
+              </button>
+            </div>
+
+            <p class="terms">
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </main>
+    <!-- link to javascipt -->
+    <script src="/app/script/script.js"></script>
+  </body>
+</html>

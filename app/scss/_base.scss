@@ -1,0 +1,84 @@
+@use "mixin" as u;
+
+:root {
+  --clrRed: hsl(0, 100%, 74%);
+  --clrDarkRed: rgb(240, 104, 104);
+  --clrGreen: hsl(154, 59%, 51%);
+  --clrBlue: hsl(248, 32%, 49%);
+  --clrDarkBlue: hsl(249, 10%, 26%);
+  --clrGrayishBlue: hsl(246, 25%, 77%);
+
+  --fs-base: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clrRed);
+  background-image: url("/images/bg-intro-mobile.png");
+
+  @include u.breakpoint-up(medium) {
+    background-image: url("/images/bg-intro-desktop.png");
+  }
+}
+
+// utilities classes
+
+.hide {
+  display: none;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.opacity {
+  opacity: 1;
+}

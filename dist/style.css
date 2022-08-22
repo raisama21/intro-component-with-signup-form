@@ -1,0 +1,265 @@
+:root {
+  --clrRed: hsl(0, 100%, 74%);
+  --clrDarkRed: rgb(240, 104, 104);
+  --clrGreen: hsl(154, 59%, 51%);
+  --clrBlue: hsl(248, 32%, 49%);
+  --clrDarkBlue: hsl(249, 10%, 26%);
+  --clrGrayishBlue: hsl(246, 25%, 77%);
+  --fs-base: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clrRed);
+  background-image: url("/images/bg-intro-mobile.png");
+}
+@media (min-width: 43.75em) {
+  body {
+    background-image: url("/images/bg-intro-desktop.png");
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.position-rel {
+  position: relative;
+}
+
+.opacity {
+  opacity: 1;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin-block: 8vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding-inline: 2rem;
+}
+@media (min-width: 43.75em) {
+  .container {
+    padding-inline: 0;
+  }
+}
+@media (min-width: 56.25em) {
+  .container {
+    flex-direction: row;
+    align-items: center;
+    gap: 5rem;
+    padding-inline: 0;
+  }
+}
+
+.text-container,
+.form {
+  max-width: 20.4375rem;
+  margin-inline: auto;
+}
+@media (min-width: 56.25em) {
+  .text-container,
+.form {
+    max-width: 69.375rem;
+    margin-inline: 0;
+    flex-direction: row;
+  }
+}
+
+.text-container {
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 43.75em) {
+  .text-container {
+    max-width: 30.875rem;
+    text-align: center;
+  }
+}
+@media (min-width: 56.25em) {
+  .text-container {
+    text-align: left;
+  }
+}
+.text-container h1 {
+  margin-bottom: 1.75rem;
+  padding-inline: 3rem;
+  font-weight: 700;
+  font-size: 1.625rem;
+}
+@media (min-width: 43.75em) {
+  .text-container h1 {
+    padding-inline: 0 0.1rem;
+    line-height: 1.2;
+    font-size: 3rem;
+  }
+}
+.text-container p {
+  font-weight: 600;
+}
+
+.limited {
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--clrBlue);
+  box-shadow: 0px 8px 0px 0px hsla(249deg, 10%, 26%, 0.3);
+}
+.limited p {
+  font-weight: 600;
+  color: hsl(0deg, 0%, 100%);
+}
+.limited p span {
+  font-weight: 500;
+  color: var(--clrGrayishBlue);
+}
+
+@media (min-width: 43.75em) {
+  .form {
+    max-width: 33.75rem;
+  }
+}
+
+.form-container {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background-color: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 8px 0px 0px hsla(249deg, 10%, 26%, 0.3);
+}
+@media (min-width: 43.75em) {
+  .form-container {
+    padding: 2.5rem;
+  }
+}
+.form-container .terms {
+  padding-inline: 1.5rem;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--clrGrayishBlue);
+}
+.form-container .terms span {
+  font-weight: 700;
+  color: var(--clrRed);
+  cursor: pointer;
+}
+
+.form-gap {
+  margin-bottom: 1rem;
+}
+@media (min-width: 43.75em) {
+  .form-gap {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-input {
+  width: 100%;
+  margin-bottom: 0.3rem;
+  padding: 1.375rem 1.125rem;
+  border: 2px solid var(--clrGrayishBlue);
+  border-radius: 0.5rem;
+  font-weight: 700;
+}
+
+.fa-exclamation {
+  display: none;
+  padding: 0.25rem 0.625rem;
+  border-radius: 50%;
+  color: hsl(0deg, 0%, 100%);
+  background-color: var(--clrDarkRed);
+  position: absolute;
+  top: 39%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+@media (min-width: 43.75em) {
+  .fa-exclamation {
+    top: 37%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+  }
+}
+
+.error-message {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--clrDarkRed);
+}
+.button {
+  margin-bottom: 0.75rem;
+}
+.button .submit {
+  width: 100%;
+  padding-block: 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.125rem;
+  background-color: var(--clrGreen);
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+.button .submit:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=style.css.map */
